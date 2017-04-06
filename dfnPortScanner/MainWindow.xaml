@@ -4,8 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dfnPortScanner"
+        WindowStartupLocation="CenterScreen"
+        
         mc:Ignorable="d"
         Title="DfN Port Scanner 1.0" Height="450" Width="300">
+    <Window.Resources>
+        <!-- Converter Resources -->
+        <local:StatusConverter x:Key="statusConverter" />
+
+    </Window.Resources>
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="90" />
@@ -46,8 +53,8 @@
             <Label Grid.Row="1" Grid.Column="1" Content="To:" Margin="0,0,0,0" HorizontalAlignment="Right"/>
             <TextBox Name="ipBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,3,8,3" />
             <TextBox Name="fromBox" Grid.Row="1" Grid.Column="0" Margin="50,3,5,3" />
-            <TextBox Name="toBox" Grid.Row="1" Grid.Column="3" Margin="2,3,50,3" />
-            <ProgressBar Name="progressBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="8,5,8,3" />
+            <TextBox Name="toBox" Grid.Row="1" Grid.Column="3" Margin="2,3,35,3" />
+            <ProgressBar Name="progressBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="8,5,8,5" />
         </Grid>
        
 
