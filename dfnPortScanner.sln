@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dfnPortScanner", "dfnPortScanner\dfnPortScanner.csproj", "{1B67C727-113B-4A4B-9DA2-4EBC3FCD3486}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortScan", "PortScan\PortScan.csproj", "{B07B775E-71A4-474B-A45C-C5458C1E3589}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortScanner", "PortScan\PortScanner.csproj", "{B07B775E-71A4-474B-A45C-C5458C1E3589}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

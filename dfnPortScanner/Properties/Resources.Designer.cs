@@ -68,6 +68,13 @@ namespace dfnPortScanner.Properties
             }
         }
 
-        
+        internal static string MainForm_btnScan_Click_Error
+        {
+            get
+            {
+                return ResourceManager.GetString("MainForm_btnScan_Click_Error", resourceCulture);
+            }
+        }
+
     }
 }
