@@ -90,16 +90,7 @@ namespace dfnPortScanner
 
         }
 
-        private static int? ConvertPort(string raw)
-        {
-            int result;
-            if (!int.TryParse(raw, out result))
-            {
-                return null;
-            }
-
-            return result;
-        }
+      
 
         
     }

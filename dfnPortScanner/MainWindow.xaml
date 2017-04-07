@@ -11,6 +11,7 @@
     <Window.Resources>
         <!-- Converter Resources -->
         <local:StatusConverter x:Key="statusConverter" />
+        <local:BoolConverter x:Key="boolConverter" />
 
     </Window.Resources>
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
@@ -32,7 +33,13 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Port" Width="80" DisplayMemberBinding="{Binding Path=Port}" />
-                    <GridViewColumn Header="State" Width="120" DisplayMemberBinding="{Binding Path=Open}" />
+                    <GridViewColumn Header="State" Width="120" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="Txt" Text="{Binding Path=Open, Converter={StaticResource boolConverter}}" Foreground="{Binding Path=Open, Converter={StaticResource statusConverter}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

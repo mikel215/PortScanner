@@ -8,8 +8,8 @@ namespace dfnPortScanner
 	{
         public object Convert(object value, Type targetType, object param, CultureInfo culture)
         {
-            string portStatus = ((string)value).ToLower();
-            if(portStatus == "closed")
+            bool portStatus = ((bool)value); ;
+            if(portStatus == false)
             {
                 return "Red";
             }
@@ -24,4 +24,25 @@ namespace dfnPortScanner
             throw new NotImplementedException();
         }
 	}
+
+    public class BoolConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object param, CultureInfo culture)
+        {
+            bool portStatus = ((bool)value);
+            if (portStatus == true)
+            {
+                return "Open";
+            }
+            else
+            {
+                return "Closed";
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object param, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
